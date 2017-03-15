@@ -24,8 +24,8 @@ def process_data(d):
     
 # Δημιουργούμε ένανέο socket και καθορίζουμε ποια host και port θα ακούει. 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-host = '127.0.0.1'
-port = 80
+host = '0.0.0.0'
+port = 3333
 
 # 'Δεσμεύουμε' το socket στο port(θύρα) του host, που έχουμε ήδη δηλώσει ποιο πάνω. 
 # Εάν το port, είναι σε χρήση θα λάβουμε ένα μήνυμα σφάλματος.

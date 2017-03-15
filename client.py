@@ -18,8 +18,8 @@ import socket
 
 # Δημιουργούμε ένα νέο socket και καθορίζουμε με ποιά host και port θα συνδέεται.
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-host = '127.0.0.1'
-port = 80
+host = '182.254.151.35'
+port = 3333
 
 # Σύνδεση με host και port.
 sock.connect((host, port))
