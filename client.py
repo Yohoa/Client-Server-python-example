@@ -26,9 +26,9 @@ sock.connect((host, port))
 
 # Αποστολή δεδομένων στον server.
 send = "Sending some data..."
-print "Sending -> %s" % (send)
+print("Sending -> %s")% (send)
 sock.send(send)
 
 # Λήψη δεδομένων από τον server.Η έξοδος αυτών γίνεται στο standard out.
 data = sock.recv(1024)
-print "Received -> %s" % (data)
+print("Received -> %s")% (data)

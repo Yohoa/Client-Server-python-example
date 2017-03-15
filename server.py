@@ -22,7 +22,7 @@ def process_data(d):
 # Το κύριο πρόγραμμα.
 #-----------------------------------------------------------------------------
     
-# Δημιουργούμε ένα νέο socket και καθορίζουμε ποια host και port θα ακούει. 
+# Δημιουργούμε ένανέο socket και καθορίζουμε ποια host και port θα ακούει. 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 host = '127.0.0.1'
 port = 80
@@ -32,7 +32,7 @@ port = 80
 sock.bind((host,port))
 
 # Λέμε στο socket να αρχίσει να ακούει για συνδέσεις. Εδώ θα χειριστεί μόνο μία.
-print "Listening..."
+print("Listening...")
 sock.listen(1)
 
 # Βάζουμε το Server σε ένα loop όπου θα δέχεται μια σύνδεση, θα λαμβάνει δεδομένα απο τον Client,
@@ -41,12 +41,12 @@ while True:
     # Αποδοχή μιας σύνδεσης και λήψη δεδομένων.
     client, address = sock.accept()
     data = client.recv(1024)
-    print "Received <- %s" % (data)
+    print("Received <- %s")% (data)
     
     if data:
         # Εάν γίνει λήψη δεδομένων θα τα επεξεργαστεί και θα τα στείλει πίσω.
         send = process_data(data)
-        print "Sent ->: %s" % (send)
+        print("Sent ->: %s")% (send)
         client.send(send)
     
     # Κλείσιμο της σύνδεσης με τον Client.
